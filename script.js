@@ -89,3 +89,44 @@ const techTree = [
         prerequisites: ['advanced-research-lab']
     }
 ];
+
+let unlockedTech = ['basic-survival']; // Initially, only the basic survival kit is unlocked
+
+// Function to check if the player can unlock a technology
+function canUnlockTech(tech) {
+    return tech.prerequisites.every(prereq => unlockedTech.includes(prereq)) &&
+           resourceCount >= tech.cost.resources;
+}
+
+// Function to unlock a technology
+function unlockTech(techId) {
+    const tech = techTree.find(t => t.id === techId);
+    if (canUnlockTech(tech)) {
+        resourceCount -= tech.cost.resources;
+        unlockedTech.push(tech.id);
+        updateResources();
+        renderTechTree();
+    }
+}
+
+// Function to render the tech tree
+function renderTechTree() {
+    const techList = document.getElementById('tech-list');
+    techList.innerHTML = ''; // Clear existing content
+
+    techTree.forEach(tech => {
+        const techItem = document.createElement('div');
+        techItem.className = 'tech-item';
+        techItem.innerHTML = `
+            <p><strong>${tech.name}</strong>: ${tech.description}</p>
+            <p>Cost: ${tech.cost.resources} resources</p>
+            <button ${!canUnlockTech(tech) ? 'disabled' : ''} onclick="unlockTech('${tech.id}')">
+                Unlock
+            </button>
+        `;
+        techList.appendChild(techItem);
+    });
+}
+
+// Initial render of the tech tree
+renderTechTree();
