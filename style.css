@@ -1,4 +1,5 @@
 /* style.css */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #1b1b1b;
@@ -36,4 +37,13 @@ button:disabled {
 button:not(:disabled) {
     background-color: #00aaff;
     color: white;
+}
+
+#zones {
+    margin-top: 20px;
+}
+
+#zones button {
+    margin: 5px;
+    background-color: #28a745;
 }
