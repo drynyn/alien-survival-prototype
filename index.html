@@ -9,27 +9,21 @@
 </head>
 <body>
     <div id="container">
-        <header>
+        <div id="main">
             <h1>Alien Survival Prototype</h1>
-        </header>
-        <main>
-            <section id="resources">
-                <h2>Resources</h2>
+            <div id="resources">
                 <p>Resources: <span id="resource-count">0</span></p>
-            </section>
-            <section id="actions">
-                <h2>Actions</h2>
+                <p>Harvesters: <span id="harvester-count">0</span></p>
+            </div>
+            <div id="actions">
                 <button id="gather-resources">Gather Resources</button>
                 <button id="build-harvester" disabled>Build Harvester (10 resources)</button>
-            </section>
-            <section id="tech-tree">
-                <h2>Tech Tree</h2>
-                <div id="tech-list"></div>
-            </section>
-        </main>
-        <footer>
-            <p>Prototype Version 1.0</p>
-        </footer>
+            </div>
+        </div>
+        <div id="sidebar">
+            <h2>Tech Tree</h2>
+            <div id="tech-list"></div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
