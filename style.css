@@ -14,11 +14,11 @@ body {
     display: flex;
     width: 80%;
     max-width: 1200px;
+    gap: 20px; /* Adds space between the main content and the sidebar */
 }
 
 #main {
     flex: 3;
-    margin-right: 20px;
 }
 
 #sidebar {
