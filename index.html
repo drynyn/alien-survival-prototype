@@ -12,10 +12,19 @@
         <h1>Alien Survival Prototype</h1>
         <div id="resources">
             <p>Resources: <span id="resource-count">0</span></p>
+            <p>Minerals: <span id="mineral-count">0</span></p>
         </div>
         <div id="actions">
             <button id="gather-resources">Gather Resources</button>
             <button id="build-harvester" disabled>Build Harvester (10 resources)</button>
+        </div>
+        <div id="zones">
+            <h2>Zones</h2>
+            <p>Select a zone to survey for mineral deposits:</p>
+            <button class="survey-zone" data-zone="1">Zone 1</button>
+            <button class="survey-zone" data-zone="2">Zone 2</button>
+            <button class="survey-zone" data-zone="3">Zone 3</button>
+            <p id="zone-result"></p>
         </div>
     </div>
     <script src="script.js"></script>
