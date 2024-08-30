@@ -47,3 +47,23 @@ button:not(:disabled) {
     margin: 5px;
     background-color: #28a745;
 }
+/* style.css (continued) */
+
+#tech-tree {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 8px;
+}
+
+.tech-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.tech-item button {
+    margin-top: 5px;
+}
+
